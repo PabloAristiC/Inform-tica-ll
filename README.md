@@ -1,2 +1,2 @@
-# Inform-tica-ll
+# Informatica-ll
 Mi proceso en informática ll
