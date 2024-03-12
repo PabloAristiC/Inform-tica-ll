@@ -21,7 +21,7 @@ class reservaVuelos:
         for i in range(len(reservaVuelos.vuelos)):
             if reservaVuelos.vuelos[i].numeroVuelo==numeroVuelo:
                 return f"""Vuelo Encontrado:
-                      {reservaVuelos.vuelos[i].mostrarInformacion()}"""
+                    {reservaVuelos.vuelos[i].mostrarInformacion()}"""
                 break
             elif i==range(len(reservaVuelos.vuelos)):
                 print(f'El vuelo {numeroVuelo} no ha sido encontrado')
