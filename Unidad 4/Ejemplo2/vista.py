@@ -15,7 +15,7 @@ class Ventana(QMainWindow):
     def __init__(self): #Constructor de la clase
         #Inicializa la ventana
         QMainWindow.__init__(self)
-        loadUi(r"pruebaVista.ui",self) #Lee el archivo de QtDesigner
+        loadUi(r"C:\Users\Pablo\Informática ll\git.repositorio\Inform-tica-ll\Unidad 4\pruebaVista.ui",self) #Lee el archivo de QtDesigner
         self.setWindowTitle("Ejemplo") #Añadimos un título a nuestra ventana
         #Conectar botón a función
         self.Boton.clicked.connect(self.funcion) #cuando el botón se presiona, se ejecutará el método funcion().

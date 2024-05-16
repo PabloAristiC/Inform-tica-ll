@@ -14,7 +14,7 @@ El archivo .ui define la estructura y diseño de la interfaz gráfica.
 class Ventana(QMainWindow):
     def __init__(self): #Constructor de la clase ventana
         QMainWindow.__init__(self) # inicializa el constructor de la clase base QMainWindow.
-        loadUi(r"pruebaVista.ui",self) #Lee el archivo de QtDesigner
+        loadUi(r"Unidad 4\pruebaVista.ui",self) #Lee el archivo de QtDesigner
 
 # se crea la instancia de la aplicación
 app = QApplication(sys.argv)

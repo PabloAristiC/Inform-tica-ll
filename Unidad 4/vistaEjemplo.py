@@ -6,7 +6,7 @@ class Ventana(QMainWindow):
     def __init__(self): #Constructor de la clase
         #Inicializa la ventana
         QMainWindow.__init__(self)
-        loadUi(r"VentanaPrincipal.ui",self) #Lee el archivo de QtDesigner
+        loadUi(r"Unidad 4\VentanaPrincipal.ui",self) #Lee el archivo de QtDesigner
         self.setWindowTitle("Ventana Principal") #Añadimos un título a nuestra ventana
         self.setup()
         #Conectar botón a función
@@ -19,7 +19,7 @@ class ventanaSecundaria(QDialog):
     def __init__(self): #Constructor de la clase
         #Inicializa la ventana
         QDialog.__init__(self)
-        loadUi(r"ventanaEmergente.ui",self) #Lee la ventana emergente
+        loadUi(r"Unidad 4\ventanaEmergente.ui",self) #Lee la ventana emergente
         self.setWindowTitle("Ventana Secundaria") #Añadimos un título a nuestra ventana
         self.setup()
     def setup(self):
