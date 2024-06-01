@@ -1,4 +1,3 @@
-import sys
 import numpy as np
 from PyQt5 import QtCore
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -10,16 +9,16 @@ class VentanaPrincipal(QMainWindow):
     #constructor
     def __init__(self, ppal=None):
         super(VentanaPrincipal,self).__init__(ppal)
-        loadUi(r'C:\Users\Pablo\Informática ll\git.repositorio\Inform-tica-ll\Unidad 4\pyqt5_matplotlib\grafica.ui',self)
+        loadUi(r'C:\Users\Pablo\Informática ll\git.repositorio\Inform-tica-ll\Unidad 4\pyqt5_matplotlib\untitled.ui',self)
         self.setup()
     #metodo para configurar las senales-slots y otros de la interfaz
     def setup(self):
         #se programa la senal para el boton
         self.grafica=Canvas_grafica()
-        self.verticalLayout_grafica.addWidget(self.grafica)
-        self.slider1.valueChanged.connect(self.slider_uno)
-        self.slider2.valueChanged.connect(self.slider_dos)
-        self.boton_salir.clicked.connect(lambda:self.close())
+        self.verticalLayout.addWidget(self.grafica)
+        self.Amplitud.valueChanged.connect(self.slider_uno)
+        self.Frecuencia.valueChanged.connect(self.slider_dos)
+        self.salir.clicked.connect(lambda:self.close())
         
     def asignarControlador(self,c):
         self.__controlador = c
@@ -39,7 +38,7 @@ class Canvas_grafica(FigureCanvas):
         self.ax.grid()
         self.ax.margins(x=0)
         self.nivel1 = 10
-        self.nivel2 = 1
+        self.nivel2 = 0.25
         self.grafica_datos()
 
     def datos1(self, valor1):
@@ -54,7 +53,7 @@ class Canvas_grafica(FigureCanvas):
         line, = self.ax.plot(x, self.nivel1*np.sin(self.nivel2*x), color='r',linewidth=2)
         self.draw()     
         line.set_ydata(np.sin(x)+24)
-        QtCore.QTimer.singleShot(10, self.grafica_datos)
+        QtCore.QTimer.singleShot(0.5, self.grafica_datos)
 
 
 

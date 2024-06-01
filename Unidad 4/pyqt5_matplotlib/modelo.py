@@ -1,7 +1,7 @@
 class sistema(object):
     def __init__(self):
-        self.nivel1=10
-        self.nivel2=10 
+        self.nivel1=0
+        self.nivel2=0
     def ampliarSenal(self,valor1):
         self.nivel1 = valor1*0.1
         return self.nivel1

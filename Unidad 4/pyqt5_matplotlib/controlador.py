@@ -13,7 +13,6 @@ class Coordinador(object):
     def datos_slide2(self, valor2):
         return self.__mi_sistema.frecuenciaSenal(valor2)
 
-
 class Principal(object):
     def __init__(self):        
         self.__app=QApplication(sys.argv)
