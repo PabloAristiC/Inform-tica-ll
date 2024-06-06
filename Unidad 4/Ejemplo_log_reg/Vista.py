@@ -72,7 +72,7 @@ class ventanaEmergente(QDialog):
         self.parent = ppl  # Guardar la referencia al padre
 
     def setup(self):
-        # self.campo_usuario.setValidator(QRegExpValidator(QRegExp("[a-zA-Z- ]+")))
+        self.campo_usuario.setValidator(QRegExpValidator(QRegExp("[a-zA-Z- ]+")))
         self.Registrarse.accepted.connect(self.registro)
         self.Registrarse.rejected.connect(lambda: self.close())
 
